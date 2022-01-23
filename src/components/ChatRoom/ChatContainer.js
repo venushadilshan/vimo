@@ -1,7 +1,7 @@
 import ChatItem from "./ChatItem";
 
 const ChatContainer = () => {
-    return ( <div className="container bg-gray-700 px-5 h-screen py-20 overflow-scroll">
+    return ( <div className="container bg-gray-700 px-5 h-screen py-10 overflow-scroll">
         <ChatItem/>
         <ChatItem/>
         <ChatItem/>
