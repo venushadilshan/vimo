@@ -10,7 +10,7 @@ const ChatContact = (props) => {
     
     <div className="flex flex-row w-full h-auto items-center  bg-gray-600 hover:bg-gray-700">
         <div className="flex flex-col">
-            <ProfileIcon />
+            <ProfileIcon imageUrl={chatData.imageUrl}/>
         </div>
         <div className="flex flex-col h-auto w-full text-slate-50 ml-2">
             <div className="flex flex-row w-full justify-start items-center">

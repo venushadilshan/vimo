@@ -4,7 +4,7 @@ const ChatItem = () => {
     return (
         <div className="flex flex-row w-full h-auto items-center my-5 ">
             <div className="flex flex-col">
-                <ProfileIcon />
+                <ProfileIcon imageUrl="https://images.unsplash.com/photo-1611175140153-bfd26338ff0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"/>
             </div>
             <div className="flex flex-col h-auto w-full text-slate-50 ml-2">
                 <div className="flex flex-row w-full justify-start items-center">
