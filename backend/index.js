@@ -30,7 +30,7 @@ io.on("connect", (socket) => {
 
     socket.on("send", (data) => {
         console.log(data);
-        socket.io(data.room).emit("get_message", data)
+        socket.to(data.room).emit("get_message", data)
     })
 })
 
