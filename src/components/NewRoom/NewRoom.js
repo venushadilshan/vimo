@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function NewRoom(){
     return(
@@ -17,7 +18,8 @@ export default function NewRoom(){
 
             <div className="flex flex-row my-2 items-center justify-center">
                
-              <button className="bg-blue-500 text-slate-50 px-2 text-md rounded-md">Join Room</button>
+              <button className="bg-blue-500 text-slate-50 px-2 py-1 text-sm rounded-md">Join Room</button>
+              <Link to="/"><button className="bg-red-500 text-slate-50 px-2 py-1  text-sm rounded-md ml-2">Cancel</button></Link>
            </div>
         </div>
     )
