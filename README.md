@@ -3,8 +3,6 @@
 <br>
 <img src="https://i.ibb.co/SfjmmpX/localhost-3000-chatroom.png" width="100%">
 
-<br>
-
 ### Libraries and Dependencies
 
 - React
