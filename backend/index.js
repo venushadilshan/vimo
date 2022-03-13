@@ -4,7 +4,7 @@ const cors = require("cors")
 const http = require("http")
 const { Server } = require("socket.io");
 const { copyFileSync } = require("fs");
-require('dotenv').config();
+//require('dotenv').config();
 app.use(cors());
 const server = http.createServer(app);
 
@@ -14,6 +14,7 @@ const io = new Server(server, {
         methods: ["GET", "POST"],
     }
 })
+
 
 
 io.on("connect", (socket) => {
@@ -35,6 +36,6 @@ io.on("connect", (socket) => {
 })
 
 
-server.listen(3005, () => {
+server.listen(process.env.PORT||3005, () => {
     console.log("Server is running")
 })
