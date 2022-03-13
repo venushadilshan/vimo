@@ -10,7 +10,7 @@ import { ChatContext, ChatContextProvider } from './context/chatContext';
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import NoChat from './components/NoChat';
 
-const socket = io.connect(process.env.REACT_APP_SERVER_URL)
+const socket = io.connect(process.env.REACT_APP_SERVER_URL,{ transports: ['websocket'] })
 function App() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("")

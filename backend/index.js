@@ -1,19 +1,29 @@
 const express = require("express");
 const app = express();
-const cors = require("cors")
+//const cors = require("cors")
+const cors = require('cors')
+
 const http = require("http")
-const { Server } = require("socket.io");
+const { Server } = require("socket.io")(server,{cors:{origin:"*"}});
 const { copyFileSync } = require("fs");
 //require('dotenv').config();
-app.use(cors());
+
+
+
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
         origin: process.env.CLIENT_URL,
         methods: ["GET", "POST"],
+        credentials: true
     }
 })
+
+app.use(cors())
+app.options('*', cors());
+
 
 
 
