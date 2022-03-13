@@ -9,7 +9,7 @@ export default function NewRoom(props) {
 console.log(props.isNewUser)
 
     return (
-        <div className="flex flex-col mt-20 w-full p-5 pt-0">
+        <div className="flex flex-col mt-20 w-full p-5 pt-0 ">
             <div className="flex flex-row">
                 <h3 className="text-slate-50 mb-2 text-md font-semibold">New Chat</h3>
             </div>

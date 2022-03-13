@@ -52,7 +52,7 @@ function App() {
 
         <div className='container'>
           <div className='flex md:flex-row lg:flex-row flex-col  w-screen h-screen'>
-            <div className='flex flex-col md:w-1/4 lg:w-1/4 w-full h-screen'>
+            <div className='flex flex-col md:w-1/4 lg:w-1/4 w-full h-auto md:h-screen lg:h-sreen'>
               <SideBar socket={socket} username={username} setUsername={setUsername} room={room} setRoom={setRoom} joinRoom={joinRoom} roomList={roomList}
                 setRoomList={setRoomList} isNewUser={isNewUser} setIsNewUser={setIsNewUser} exitRoom={exitRoom} />
 

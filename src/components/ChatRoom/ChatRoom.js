@@ -11,6 +11,7 @@ const ChatRoom = (props) => {
         <TitleBar room={props.room} users={users} messageList={messageList} username={props.username} isNewUser={props.isNewUser} setIsNewUser={props.setIsNewUser} exitRoom={props.exitRoom} />
         <ChatContainer messageList={messageList} setMessageList={setMessageList} username={props.username} messageAutho/>
         <SendMessage messageList={messageList} setMessageList={setMessageList} room={props.room} socket={props.socket} username={props.username} setUsers={setUsers} users={users}/>
+        
     </div>);
 }
 
