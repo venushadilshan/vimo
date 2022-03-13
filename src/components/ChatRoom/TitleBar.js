@@ -1,5 +1,5 @@
 import ProfileIcon from "./ProfileIcon";
-import { MdSearch } from "react-icons/md";
+import { MdSearch,MdAccountCircle } from "react-icons/md";
 
 const TitleBar = (props) => {
     console.log(props.users)
@@ -13,9 +13,11 @@ const TitleBar = (props) => {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center justify-end bg-gray-500 rounded-full m-0 pr-3 text-lg text-slate-50 duration-300">
-                <input type="text" className=" rounded-full bg-gray-500 w-20 focus:w-full outline-none text-slate-50 text-sm p-1 pl-3 duration-300" />
-                <MdSearch />
+            <div className="flex flex-row items-center justify-end bg-gray-500 rounded-full m-0 px-3 py-1 text-lg text-slate-50 duration-300">
+                {/*<input type="text" className=" rounded-full bg-gray-500 w-20 focus:w-full outline-none text-slate-50 text-sm p-1 pl-3 duration-300" />*/}
+                <MdAccountCircle className="text-3xl mr-1 "/>
+                <p >You: {props.username}</p>
+               
             </div>
 
         </div>);

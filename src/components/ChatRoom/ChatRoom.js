@@ -8,7 +8,7 @@ const ChatRoom = (props) => {
     const [users, setUsers] = useState([])
     return (
     <div className="container w-full relative">
-        <TitleBar room={props.room} users={users} messageList={messageList}/>
+        <TitleBar room={props.room} users={users} messageList={messageList} username={props.username}/>
         <ChatContainer messageList={messageList} setMessageList={setMessageList} username={props.username} messageAutho/>
         <SendMessage messageList={messageList} setMessageList={setMessageList} room={props.room} socket={props.socket} username={props.username} setUsers={setUsers} users={users}/>
     </div>);
