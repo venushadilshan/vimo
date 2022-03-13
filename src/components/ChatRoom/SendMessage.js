@@ -18,6 +18,9 @@ const SendMessage = (props) => {
 
         await props.socket.emit("send", messageData)
         props.setMessageList((list)=>[...list, messageData])
+        
+        setCurrentMessage("")
+
     }
 
     useEffect(() => {
@@ -25,16 +28,23 @@ const SendMessage = (props) => {
             console.log(data)
             props.setMessageList((list)=>[...list, data])
             console.log("users :" + props.users)
-          
-       /*     if (props.users.length==0 || props.users.includes(data.author)!=true)
+
+            let temp;
+
+         {/*  if (!props.users.includes(data.author))
             {
-                props.setUsers((list)=>[...list, data.author])
+                console.log("in the if")
+                temp=props.users.concat(data.author)
+                props.setUsers(temp)
+                console.log("temp" + temp)
+               //props.setUsers(props.users.push(data.author))
+               
             }
 
             else if(props.users.includes(data.author) )
             {
                 console.log("user exist in the array")
-            }*/
+            }*/}
            
         })
     }, [props.socket])
@@ -43,7 +53,7 @@ const SendMessage = (props) => {
     return (<div className="flex flex-row w-full bg-gray-800 items-center absolute bottom-0 px-5 py-2 ">
 
         <input type="text" className="text-sm h-8 p-2 w-full outline-none bg-gray-500 text-slate-50 rounded-full" placeholder="Send something" rows={1} 
-        onChange={(e)=>{setCurrentMessage(e.target.value)}}/>
+        onChange={(e)=>{setCurrentMessage(e.target.value)}} value={currentMessage}/>
         <button className="bg-blue-500 mx-5 h-8 w-auto items-center p-2 text-slate-50 rounded-full flex flex-row" onClick={sendMessage}><MdSend/> </button>
     </div>);
 }

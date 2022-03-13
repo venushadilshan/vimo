@@ -7,16 +7,16 @@ const ChatItem = (props) => {
     useEffect(()=>{
         if(props.messageAuthor==props.username)
         {
-            setYou("justify-end")
+            setYou("justify-start")
         }
         else
         {
-            setYou("justify-start")
+            setYou("justify-end")
         }
     },[])
   
     return (
-        <div className={`flex flex-row w-full h-auto items-center my-5 ${you}`}>
+        <div className={`flex flex-row w-full h-auto items-center my-5 duration-1000 fade-anim ${you}`}>
             <div className="flex flex-col">
                 <ProfileIcon imageUrl="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png"/>
             </div>
@@ -26,7 +26,7 @@ const ChatItem = (props) => {
                 <p className="text-sm text-slate-400 ml-2" style={{fontSize:"0.6em"}}>{props.datetime}</p>
                 </div>
              
-                <p className="text-sm w-4/5">{props.message} </p>
+                <p className="text-sm w-full">{props.message} </p>
                
             </div>
         </div>);

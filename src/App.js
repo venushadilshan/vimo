@@ -24,6 +24,7 @@ function App() {
       socket.emit("join_room", room)
       navigate("/chatroom");
       console.log(username)
+      setRoomList([])
       setRoomList((list)=>[...list, room])
       setIsNewUser(false)
 

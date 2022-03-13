@@ -2,13 +2,14 @@ import ProfileIcon from "./ProfileIcon";
 import { MdSearch } from "react-icons/md";
 
 const TitleBar = (props) => {
+    console.log(props.users)
     return (
         <div className="flex flex-row w-full bg-gray-800 h-14 items-center absolute justify-between px-2">
             <div className="flex flex-row items-center">
                 <ProfileIcon imageUrl={"https://cdn.iconscout.com/icon/free/png-256/chat-2130787-1794829.png"}/>
                 <div className="flex flex-col items-start ">
                     <h1 className="text-lg text-slate-50 ml-2">{props.room}</h1>
-                    <p className="text-sm text-slate-400 ml-3" style={{ fontSize: "0.6em" }}></p>
+                    <p className="text-sm text-slate-400 ml-3" style={{ fontSize: "0.6em" }}>{/*props.users*/ } </p>
                 </div>
             </div>
 

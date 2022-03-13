@@ -13,3 +13,24 @@ body
   -ms-overflow-style: none; 
   scrollbar-width: none;  
 }
+
+
+.fade-anim
+{
+  animation-name: chat;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes chat {
+  0%{
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+  
+}
