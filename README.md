@@ -1,4 +1,4 @@
-## VIMO - Instance Chat App with socket.io
+## VIMO - Real-time Chat App with socket.io
 
 <br>
 
