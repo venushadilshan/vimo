@@ -15,9 +15,17 @@ const SendMessage = (props) => {
             time: new Date(Date.now()).getHours() + ":" + new Date(Date.now()).getMinutes()
 
         }
+        if(currentMessage!=""){
+            await props.socket.emit("send", messageData)
+            props.setMessageList((list)=>[...list, messageData])
+        }
 
-        await props.socket.emit("send", messageData)
-        props.setMessageList((list)=>[...list, messageData])
+        else
+        {
+            alert("Message cannot be empty")
+        }
+
+       
         
         setCurrentMessage("")
 
@@ -25,25 +33,26 @@ const SendMessage = (props) => {
 
     useEffect(() => {
         props.socket.on("get_message",(data)=>{
-            console.log(data)
+           
             props.setMessageList((list)=>[...list, data])
             console.log("users :" + props.users)
 
-            let temp;
+            
 
-         {/*  if (!props.users.includes(data.author))
+          {/*
+           if (props.users.includes(data.author))
             {
-                console.log("in the if")
-                temp=props.users.concat(data.author)
-                props.setUsers(temp)
-                console.log("temp" + temp)
-               //props.setUsers(props.users.push(data.author))
+                
+               
+                console.log("user exist in the array")
+                
+              
                
             }
 
-            else if(props.users.includes(data.author) )
+            else  
             {
-                console.log("user exist in the array")
+                props.setUsers((list)=>[...list, data.author])
             }*/}
            
         })

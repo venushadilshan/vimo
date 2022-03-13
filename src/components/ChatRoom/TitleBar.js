@@ -9,7 +9,7 @@ const TitleBar = (props) => {
                 <ProfileIcon imageUrl={"https://cdn.iconscout.com/icon/free/png-256/chat-2130787-1794829.png"}/>
                 <div className="flex flex-col items-start ">
                     <h1 className="text-lg text-slate-50 ml-2">{props.room}</h1>
-                    <p className="text-sm text-slate-400 ml-3" style={{ fontSize: "0.6em" }}>{/*props.users*/ } </p>
+                    <p className="text-sm text-slate-400 ml-3" style={{ fontSize: "0.6em" }}>{props.users} </p>
                 </div>
             </div>
 

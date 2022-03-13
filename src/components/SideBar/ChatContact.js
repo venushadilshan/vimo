@@ -15,7 +15,7 @@ const ChatContact = (props) => {
         <div className="flex flex-col h-auto w-full text-slate-50 ml-2">
             <div className="flex flex-row w-full justify-start items-center">
                 <h1 className="font-semibold text-sm ml-1">{props.room}</h1>
-                <p className="text-sm text-slate-400 ml-1" style={{ fontSize: "0.6em" }}>{props.room+  " "+ props.room } </p>
+                <p className="text-sm text-slate-400 ml-1" style={{ fontSize: "0.6em" }}>{/*props.room+  " "+ props.room */} </p>
             </div>
           {/*  <p className="text-sm text-slate-50 ml-1">{(lastMessageLength>60) ? props.room.substring(0,60)+"..." : props.room}</p>*/}
 
