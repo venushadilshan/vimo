@@ -7,7 +7,7 @@ const ChatContactContainer = (props) => {
     const [chatContactList, setChatContactList] = useState(chatData);
     
     
-    return ( <div className="flex-flex-col pt-14 overflow-y-scroll hide-scroll divide-y divide-gray-500 ">
+    return ( <div className="lg:flex hidden flex-col pt-14 overflow-y-scroll hide-scroll divide-y divide-gray-500  ">
 
         {
             props.roomList.map((item=>{

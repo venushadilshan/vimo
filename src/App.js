@@ -59,7 +59,7 @@ function App() {
             </div>
             <div className='flex flex-col md:w-3/4 lg:w-3/4 w-full h-screen'>
               <Routes>
-                <Route path="/chatroom" element={<ChatRoom socket={socket} username={username} room={room} />} />
+                <Route path="/chatroom" element={<ChatRoom socket={socket} username={username} room={room} isNewUser={isNewUser} setIsNewUser={setIsNewUser} exitRoom={exitRoom}  />} />
                 <Route path="/new" element={<NoChat />} />
 
                 <Route path="/" element={<NoChat />}/>

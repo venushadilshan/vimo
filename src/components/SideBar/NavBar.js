@@ -12,9 +12,7 @@ const NavBar = (props) => {
    {/* <input type="text" className=" rounded-full bg-gray-500 w-20 focus:w-full outline-none text-slate-50 text-sm p-1 pl-3 duration-300"  />
     <MdSearch/> */}
     {props.isNewUser===true ?
-    (<Link to="/new"><button className="bg-blue-500 rounded-full p-2 text-lg text-slate-50 duration-300"><MdInsertComment/></button></Link>):(
-
-        <button className="bg-blue-500 rounded-full p-1 px-2 text-sm text-slate-50 duration-300" onClick={props.exitRoom}>Exit Room</button>
+    (<Link to="/new"><button className="bg-blue-500 rounded-full p-2 text-lg text-slate-50 duration-300"><MdInsertComment/></button></Link>):(null
     )}
     
  

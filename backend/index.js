@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors')
 
 const http = require("http")
-const { Server } = require("socket.io")(server,{cors:{origin:"*"}});
+const { Server } = require("socket.io");
 const { copyFileSync } = require("fs");
 //require('dotenv').config();
 
