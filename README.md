@@ -1,7 +1,11 @@
 ## VIMO - Instance Chat App with socket.io
 
 <br>
-<img src="https://i.ibb.co/SfjmmpX/localhost-3000-chatroom.png" width="100%">
+<p float="left">
+<img src="https://i.ibb.co/SfjmmpX/localhost-3000-chatroom.png" width="400">
+<img src="https://i.ibb.co/ymCTxqw/vimo-vercel-app-i-Phone-6-7-8.png" width="100">
+
+</p>
 
 ### Libraries and Dependencies
 
